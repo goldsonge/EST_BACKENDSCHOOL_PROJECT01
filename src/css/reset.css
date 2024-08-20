@@ -55,7 +55,9 @@ button {
 button:hover {
     cursor: pointer;
 }
-
+img {
+    width: 100%;
+}
 /* 반응형 */
 html, body{	font-size: 62.5%;}
 .mo {display: none !important;}

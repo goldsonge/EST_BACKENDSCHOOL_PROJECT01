@@ -6,7 +6,6 @@
     <title>HODU</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
-    <script src="./js/main.js"></script>
 </head>
 <body>
     <header class="header">
@@ -78,37 +77,47 @@
                 </div>
             </section>
             <section class="sec sec04">
-                <h2 class="main_tit">Where you’ll be</h2>
-                <p class="sub_txt">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
-                <div class="map_area">
-                    <img src="./img/sec04_img01.jpg" alt="지도 사진">
+                <h2 class="dis-no">Where you’ll be</h2>
+                <div class="inner_box">
+                    <p class="main_tit">Where you’ll be</p>
+                    <p class="sub_txt">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
+                    <div class="map_area">
+                        <img src="./img/sec04_img01.jpg" alt="지도 사진">
+                    </div>
                 </div>
             </section>
-            <article>
-                <div class="flex_box">
+            <article class="sec sec05">
+                <div class="inner_box flex_box">
                     <div class="l_box">
-                        <h2 class="main_tit">Subscribe to our Blog post</h2>
+                        <p class="main_tit">Subscribe to our Blog post</p>
                         <p class="sub_txt">
                             Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br>
                             Lorem Ipsum has been the industry's standard dummy text
                         </p>
                     </div>
                     <form action="./index.html" method="POST" class="r_box flex_box">
-                        <input type="email" placeholder="Enter your e-mail address">
-                        <button type="submit" class="btn">Subscribe</button>
+                        <label for="useremail"><img src="./img/icon_mail.svg" alt="메일 아이콘"></label>
+                        <input type="email" id="useremail" placeholder="Enter your e-mail address">
+                        <button onclick="join_user()" class="btn">Subscribe</button>
                     </form>
                 </div>
             </article>
         </article>
     </main>
-    <footer class="flex_box">
-        <a href="./index.html"><img src="./img/logo.svg" alt="HODU LOGO"></a>
-        <ul class="sns_box flex_box">
-            <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-blog.png" alt="blog"></a></li>
-            <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-insta.png" alt="instagram"></a></li>
-            <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-facebook.png" alt="facebook"></a></li>
-            <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-youtube.png" alt="youtube"></a></li>
-        </ul>
+    <footer class="footer">
+        <div class="inner_box flex_box">
+            <a href="./index.html"><img src="./img/logo.svg" alt="HODU LOGO"></a>
+            <ul class="sns_box flex_box">
+                <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-blog.png" alt="blog"></a></li>
+                <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-insta.png" alt="instagram"></a></li>
+                <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-facebook.png" alt="facebook"></a></li>
+                <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-youtube.png" alt="youtube"></a></li>
+            </ul>
+        </div>
     </footer>
+    <!-- 상단 이동하기 버튼 -->
+    <a href="#" class="btn_top"></a>
+
+    <script src="./js/main.js"></script>
 </body>
 </html>

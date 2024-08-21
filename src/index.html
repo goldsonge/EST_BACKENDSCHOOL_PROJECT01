@@ -12,12 +12,24 @@
         <div class="inner_box flex_box">
             <h1><a href="./index.html"><img src="./img/logo.svg" alt="HODU LOGO"></a></h1>
             <nav>
-                <ul class="nav flex_box">
+                <ul class="nav flex_box pc">
                     <li><a href="javascript:alert('준비중입니다.')">Home</a></li>
                     <li><a href="javascript:alert('준비중입니다.')">About</a></li>
                     <li><a href="javascript:alert('준비중입니다.')">Support</a></li>
                     <li><a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a></li>
                 </ul>
+                <div id="ham_menuToggle" class="mo">
+                    <input type="checkbox" />
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <ul id="ham_menu">
+                        <a href="#"><li>Home</li></a>
+                        <a href="#"><li>About</li></a>
+                        <a href="#"><li>Info</li></a>
+                        <a href="#"><li>Contact</li></a>
+                    </ul>
+                </div>
             </nav>
         </div>
     </header>
@@ -73,7 +85,7 @@
                 </div>
                 <div class="btn_wr">
                     <p class="txt">Continue exploring HODU</p>
-                    <button class="more_btn btn">Show more</button>
+                    <button onclick="javascript:alert('준비중입니다.')" class="more_btn btn">Show more</button>
                 </div>
             </section>
             <section class="sec sec04">
@@ -82,7 +94,36 @@
                     <p class="main_tit">Where you’ll be</p>
                     <p class="sub_txt">330, Cheomdan-ro, Jeju-si, Jeju-do, Republic of Korea</p>
                     <div class="map_area">
-                        <img src="./img/sec04_img01.jpg" alt="지도 사진">
+<!--                        <div id="map" style="width:500px;height:400px;"></div>-->
+<!--                        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=90b9a7c83cd335f55da94715fded22b5"></script>-->
+<!--                        <script>-->
+<!--                            var container = document.getElementById('map'); //지도를 담을 영역의 DOM 레퍼런스-->
+<!--                            var options = { //지도를 생성할 때 필요한 기본 옵션-->
+<!--                                center: new kakao.maps.LatLng(33.450701, 126.570667), //지도의 중심좌표.-->
+<!--                                level: 3 //지도의 레벨(확대, 축소 정도)-->
+<!--                            };-->
+
+<!--                            var map = new kakao.maps.Map(container, options); //지도 생성 및 객체 리턴-->
+<!--                            -->
+<!--                            -->
+<!--                        </script>-->
+                        <!-- * 카카오맵 - 지도퍼가기 -->
+                        <!-- 1. 지도 노드 -->
+                        <div id="daumRoughmapContainer1724222163322" class="root_daum_roughmap root_daum_roughmap_landing map"></div>
+
+                        <!--
+                            2. 설치 스크립트
+                            * 지도 퍼가기 서비스를 2개 이상 넣을 경우, 설치 스크립트는 하나만 삽입합니다.
+                        -->
+                        <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+                        <!-- 3. 실행 스크립트 -->
+                        <script charset="UTF-8">
+                            new daum.roughmap.Lander({
+                                "timestamp" : "1724222163322",
+                                "key" : "2kekf",
+                            }).render();
+                        </script>
                     </div>
                 </div>
             </section>
@@ -95,11 +136,20 @@
                             Lorem Ipsum has been the industry's standard dummy text
                         </p>
                     </div>
-                    <form action="./index.html" method="POST" class="r_box flex_box">
+                    <form action="./index.html" method="POST" class="r_box flex_box" id="myForm">
                         <label for="useremail"><img src="./img/icon_mail.svg" alt="메일 아이콘"></label>
                         <input type="email" id="useremail" placeholder="Enter your e-mail address">
                         <button onclick="join_user()" class="btn">Subscribe</button>
                     </form>
+                </div>
+                <div class="pop_wr">
+                    <div class="pop_bg"></div>
+                    <div class="pop_cont">
+                        <img src="./img/sec05_pop_img01.png" alt="호두 얼굴 사진">
+                        <p class="main_tit">Thank you!</p>
+                        <p class="sub_txt">Lorem Ipsum is simply dummy text of the printing industry.</p>
+                        <button class="exit_btn btn">OK! I Love HODU</button>
+                    </div>
                 </div>
             </article>
         </article>

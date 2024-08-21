@@ -19,7 +19,7 @@ btnTop.addEventListener('click', function(event) {
 });
 
 function scrollToTop() {
-    const scrollStep = window.scrollY / 15;
+    const scrollStep = window.scrollY;
     const scrollInterval = setInterval(function() {
         if (window.scrollY !== 0) {
             window.scrollBy(0, -scrollStep);
@@ -33,15 +33,41 @@ function scrollToTop() {
 // 이메일 유효성 검사
 function join_user(){
     event.preventDefault();
-    var useremail = document.getElementById("useremail");
-    var valid_txt = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
+    const useremail = document.getElementById("useremail");
+    const validTxt = /^[A-Za-z0-9_\.\-]+@[A-Za-z0-9\-]+\.[A-Za-z0-9\-]+/;
     //(알파벳,숫자)@(알파벳,숫자).(알파벳,숫자)
 
-    if(valid_txt.test(useremail.value)==false){
-
+    if(validTxt.test(useremail.value)==false){
         alert("이메일 주소가 올바르지 않습니다.");
         useremail.focus();
         return;
+    } else {
+        // 이메일 주소를 올바르게 작성했을 때
+        // console.log(useremail.value)
+
+        const body = document.body;
+        const form = document.getElementById("myForm");
+        const popCont = document.querySelector('.sec05 .pop_wr');
+        const popBg = document.querySelector('.sec05 .pop_wr .pop_bg');
+        const popBtn = document.querySelector('.sec05 .pop_wr .exit_btn');
+
+        function togglePopup(isActive) {
+            body.classList.toggle('scrollLock', isActive);
+            popCont.classList.toggle('active', isActive);
+        }
+        // 팝업 버튼 클릭시
+        popBtn.addEventListener('click', function(event) {
+            event.preventDefault();
+            form.submit();
+            togglePopup(false);
+        });
+        // 팝업 배경 클릭시
+        popBg.addEventListener('click', function() {
+            togglePopup(false);
+        });
+
+        // 처음에 팝업을 열 때
+        togglePopup(true);
     }
 
 }

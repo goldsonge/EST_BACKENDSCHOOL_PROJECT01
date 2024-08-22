@@ -2,7 +2,7 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name=" viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" conetent="width-device-width, initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
     <title>HODU</title>
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
@@ -19,16 +19,20 @@
                     <li><a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a></li>
                 </ul>
                 <div id="ham_menuToggle" class="mo">
-                    <input type="checkbox" />
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <ul id="ham_menu">
-                        <a href="#"><li>Home</li></a>
-                        <a href="#"><li>About</li></a>
-                        <a href="#"><li>Info</li></a>
-                        <a href="#"><li>Contact</li></a>
-                    </ul>
+                    <input type="checkbox" id="check_box" />
+                    <label for="check_box">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </label>
+                    <div id="side_menu">
+                        <ul>
+                            <li><a href="javascript:alert('준비중입니다.')">Home</a></li>
+                            <li><a href="javascript:alert('준비중입니다.')">About</a></li>
+                            <li><a href="javascript:alert('준비중입니다.')">Support</a></li>
+                            <li><a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a></li>
+                        </ul>
+                    </div>
                 </div>
             </nav>
         </div>
@@ -44,13 +48,13 @@
                     <div class="cont flex_box">
                         <p class="main_tit">
                             Lorem Ipsum is simply<br>
-                            dummy text of the printing and
+                            dummy text<br class="mo"> of the printing and
                         </p>
                         <p class="sub_txt">
-                            Lorem Ipsum is simply dummy text of the printing and<br>
+                            Lorem Ipsum is simply dummy text<br class="mo"> of the printing and<br class="pc">
                             typesetting industry.<br>
-                            Lorem Ipsum has been the industry's standard dummy text<br>
-                            ever since the 1500s, when an unknown
+                            Lorem Ipsum has been the industry's<br class="mo"> standard dummy text<br class="pc">
+                            ever since the 1500s,<br class="mo"> when an unknown
                         </p>
                         <a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a>
                     </div>
@@ -166,7 +170,7 @@
         </div>
     </footer>
     <!-- 상단 이동하기 버튼 -->
-    <a href="#" class="btn_top"></a>
+    <a href="#" class="btn_top pc"></a>
 
     <script src="./js/main.js"></script>
 </body>

@@ -12,9 +12,6 @@ html {
 .pc {
     display: block;
 }
-.mo {
-    display: none;
-}
 .dis-no {
     display: none;
 }
@@ -69,6 +66,7 @@ html {
 .header.sticky {
     position: sticky;
     top: 0;
+    z-index: 999;
     background-color: #fff;
 }
 .header .inner_box {
@@ -89,146 +87,67 @@ html {
     font-size: 1.6rem;
 }
 /* hambuger menu*/
-#ham_menuToggle
-{
-    display: block;
-    position: relative;
-    top: 50px;
-    left: 50px;
-
-    z-index: 1;
-
-    -webkit-user-select: none;
-    user-select: none;
+/* 숨겨진 체크박스 */
+#check_box {
+    display: none;
 }
 
-#ham_menuToggle a
-{
-    text-decoration: none;
-    color: #232323;
-
-    transition: color 0.3s ease;
-}
-
-#ham_menuToggle a:hover
-{
-    color: tomato;
-}
-
-
-#ham_menuToggle input
-{
-    display: block;
-    width: 40px;
-    height: 32px;
+/* 햄버거 메뉴 버튼 */
+#check_box + label {
     position: absolute;
-    top: -7px;
-    left: -5px;
-
+    display: block;
+    width: 24px;
+    height: 24px;
     cursor: pointer;
-
-    opacity: 0; /* hide this */
-    z-index: 2; /* and place it over the hamburger */
-
-    -webkit-touch-callout: none;
+    z-index: 2;
+    right: 20px;
+    top: 30px;
+    transition: all 300ms;
+    background: url("../img/icon_ham_off.svg") center no-repeat;
 }
 
-/*
- * Just a quick hamburger
- */
-#ham_menuToggle span
-{
-    display: block;
-    width: 33px;
-    height: 4px;
-    margin-bottom: 5px;
-    position: relative;
+#check_box:checked + label {
+    top: 28px;
+    right: calc(300px + -60px); /* 메뉴 폭(300px) + 여백(26px)만큼 왼쪽으로 이동 */
+    background: url("../img/icon_ham_on.svg") center no-repeat;
+}
 
-    background: #cdcdcd;
-    border-radius: 3px;
-
+/* 사이드 메뉴 */
+#side_menu {
+    position: fixed;
+    width: 289px;
+    height: 100%;
+    background: #263140;
+    right: -289px;
+    transition: all 300ms;
     z-index: 1;
-
-    transform-origin: 4px 0px;
-
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
-    opacity 0.55s ease;
+    top: 0px;
+    padding: 10.5rem 2rem 2rem 5rem;
+    box-sizing: border-box;
 }
 
-#ham_menuToggle span:first-child
-{
-    transform-origin: 0% 0%;
+/* 사이드 메뉴가 열릴 때 */
+#check_box:checked + label + #side_menu {
+    right: 0;
 }
 
-#ham_menuToggle span:nth-last-child(2)
-{
-    transform-origin: 0% 100%;
-}
-
-/*
- * Transform all the slices of hamburger
- * into a crossmark.
- */
-#ham_menuToggle input:checked ~ span
-{
-    opacity: 1;
-    transform: rotate(45deg) translate(-2px, -1px);
-    background: #232323;
-}
-
-/*
- * But let's hide the middle one.
- */
-#ham_menuToggle input:checked ~ span:nth-last-child(3)
-{
-    opacity: 0;
-    transform: rotate(0deg) scale(0.2, 0.2);
-}
-
-/*
- * Ohyeah and the last one should go the other direction
- */
-#ham_menuToggle input:checked ~ span:nth-last-child(2)
-{
-    transform: rotate(-45deg) translate(0, -1px);
-}
-
-/*
- * Make this absolute positioned
- * at the top left of the screen
- */
-#ham_menu
-{
-    position: absolute;
-    width: 300px;
-    margin: -100px 0 0 -50px;
-    padding: 50px;
-    padding-top: 125px;
-
-    background: #ededed;
+/* 사이드 메뉴 스타일 */
+#side_menu ul {
     list-style-type: none;
-    -webkit-font-smoothing: antialiased;
-    /* to stop flickering of text in safari */
-
-    transform-origin: 0% 0%;
-    transform: translate(-100%, 0);
-
-    transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+    padding: 0;
 }
 
-#ham_menu li
-{
-    padding: 10px 0;
-    font-size: 22px;
+#side_menu ul li {
+    padding: 1.5rem 0;
 }
-
-/*
- * And let's slide it in from the left
- */
-#ham_menuToggle input:checked ~ ul
-{
-    transform: none;
+#side_menu ul li:last-child {
+    margin-top: 3.5rem;
+}
+#side_menu ul li a {
+    color: #fff;
+    font-size: 1.6rem;
+    line-height: 2rem;
+    font-weight: 700;
 }
 /* sec01 */
 .sec01 {
@@ -250,7 +169,7 @@ html {
     align-items: center;
     justify-content: center;
     gap: 11rem;
-    padding: 0 3rem;
+    padding: 0 3.2rem;
     margin: 8rem 0 0;
 }
 .sec02 .r_box .sub_txt {
@@ -416,9 +335,12 @@ html {
 .footer .inner_box .sns_box {
     gap: 2rem;
 }
+
 @media screen and (max-width:1280px) {
-    .sec02 .r_box .main_tit br {
-        display: none;
+    .sec02 {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4rem;
     }
 }
 @media screen and (max-width:1024px) {
@@ -426,6 +348,15 @@ html {
         display: none;
     }
     .mo {
-        display: block;
+        display: block !important;
+    }
+    .header {
+        padding: 2.4rem 0;
+    }
+}
+@media screen and (max-width:768px) {
+    .main_tit {
+        font-size: 2.4rem;
+        line-height: 3rem;
     }
 }

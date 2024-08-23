@@ -153,7 +153,7 @@ html {
 .sec01 {
     padding: 20rem 0 26rem;
     background: #F2E9D8 url("../img/sec01_bg01.png") 61.4583vw bottom no-repeat;
-    background-size: contain;
+    background-size: 41rem;
 }
 .sec01 .cont {
     gap: 4rem;
@@ -230,6 +230,7 @@ html {
 .sec05 {
     padding: 17rem 0 ;
     background: url("../img/sec05_bg01.jpg") center no-repeat;
+    background-size: cover;
     position: relative;
 }
 .sec05 .inner_box {
@@ -260,6 +261,8 @@ html {
 }
 .sec05 .inner_box .r_box {
     width: 42.6%;
+}
+.sec05 .inner_box .r_box .flex_box {
     align-items: center;
     background: #fff;
     padding: .5rem .6rem .5rem 2.8rem;
@@ -326,6 +329,7 @@ html {
     padding: 4.5rem 0;
 }
 .footer .inner_box {
+    width: 100%;
     max-width: 128rem;
     margin: 0 auto;
     justify-content: space-between;
@@ -336,13 +340,6 @@ html {
     gap: 2rem;
 }
 
-@media screen and (max-width:1280px) {
-    .sec02 {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 4rem;
-    }
-}
 @media screen and (max-width:1024px) {
     .pc {
         display: none;
@@ -353,10 +350,172 @@ html {
     .header {
         padding: 2.4rem 0;
     }
+    .sec02 {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+    .sec04 {
+        padding: 0 3.2rem;
+    }
+    .sec04 .inner_box {
+        padding-top: 4rem;
+        margin-bottom: 32rem;
+    }
+    .sec05 {
+        padding: 12rem 0;
+        background-size: cover;
+    }
+    .sec05 .inner_box {
+        width: 65.7%;
+        padding: 3.6rem 3.2rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 3rem;
+        top: -28rem;
+    }
+    .sec05 .inner_box .l_box .main_tit {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    .sec05 .inner_box .l_box p + p {
+        margin-top: 2rem;
+    }
+    .sec05 .inner_box .r_box {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2rem;
+    }
+    .sec05 .inner_box .r_box .flex_box {
+        width: -webkit-fill-available;
+        padding: 0.7rem 1.6rem .8rem;
+    }
+    .sec05 .inner_box .r_box label {
+        margin-right: 1.4rem;
+    }
+    .sec05 .pop_wr.active .pop_cont {
+        max-width: 30rem;
+        background-size: contain;
+        background-color: #F2E9D8;
+    }
+    .sec05 .pop_wr .pop_cont img {
+        width: 6rem;
+    }
+    .sec05 .pop_wr .pop_cont .main_tit {
+        font-size: 2.4rem;
+        line-height: 3rem;
+    }
+    .sec05 .pop_wr .pop_cont .sub_txt {
+        margin-top: 1rem;
+    }
+    .sec05 .pop_wr .pop_cont .btn {
+        font-size: 1.4rem;
+        margin-top: 2.4rem;
+    }
+    .footer {
+        padding: 3rem 0 2.4rem;
+    }
+    .footer .inner_box {
+        align-items: flex-start;
+        flex-direction: column;
+        margin: 0;
+        padding: 0;
+        gap: 5.8rem;
+    }
+    .footer .inner_box > a {
+        width: 11.2rem;
+    }
+    .footer > .flex_box {
+        padding: 0 2rem;
+        justify-content: space-between;
+    }
+    .footer .inner_box .sns_box {
+        gap: 1.6rem;
+    }
+    .footer .inner_box .sns_box a {
+        display: block;
+        width: 3.2rem;
+    }
+    .footer .menu_box {
+        text-align: right;
+        width: 40%;
+    }
+    .footer .menu_box li + li {
+        margin-top: 1.6rem;
+    }
+    .footer .menu_box li a {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+        color: #767676;
+    }
 }
 @media screen and (max-width:768px) {
+    * {
+        font-size: 1.4rem;
+        line-height: 1.8rem;
+    }
     .main_tit {
         font-size: 2.4rem;
         line-height: 3rem;
+        letter-spacing: -0.7px;
+    }
+    .btn {
+        padding: 1.1rem 2.4rem;
+        font-weight: 700;
+    }
+    .header h1 {
+        width: 9.2rem;
+    }
+
+    .sec01 {
+        padding: 4rem 0 39rem;
+        background-position: bottom;
+        background-size: 19.7rem;
+    }
+    .sec01 .cont {
+        gap: 3rem;
+        align-items: center;
+        text-align: center;
+    }
+    .sec02 {
+        margin-top: 4rem;
+        align-items: flex-start;
+    }
+    .sec02 .r_box .sub_txt {
+        margin-top: 2rem;
+    }
+    .sec03 {
+        margin: 6rem 0;
+    }
+    .sec03 .sub_txt {
+        margin-top: 3rem;
+    }
+    .sec03 .grid_box {
+        display: flex;
+        flex-direction: column;
+        gap: 3.2rem;
+        padding: 0 3.2rem;
+        margin-top: 4rem;
+    }
+    .sec03 .btn_wr {
+        margin-top: 6rem;
+    }
+    .sec03 .btn_wr .more_btn {
+        padding: 1.5rem 2.9rem;
+        font-size: 1.6rem;
+        line-height: 2rem;
+    }
+    .sec03 .btn_wr .txt {
+        font-size: 1.8rem;
+        line-height: 2.4rem;
+    }
+    .sec04 .map_area .map,
+    .sec04 .map_area .root_daum_roughmap .wrap_map{
+        height: 13rem;
+    }
+    .sec04 .map_area .roughmap_maker_label .roughmap_lebel_text {
+        display: none;
     }
 }

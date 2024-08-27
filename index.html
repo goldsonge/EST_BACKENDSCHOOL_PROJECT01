@@ -4,44 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HODU</title>
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header class="header">
         <div class="inner_box flex_box">
-            <h1><a href="./index.html"><img src="./img/logo.svg" alt="HODU LOGO"></a></h1>
-            <nav>
-                <ul class="nav flex_box pc">
+            <h1><a href="./index.html"><img src="img/logo.svg" alt="hodu"></a></h1>
+            <nav class="main_nav">
+                <ul class="nav flex_box">
                     <li><a href="javascript:alert('준비중입니다.')">Home</a></li>
                     <li><a href="javascript:alert('준비중입니다.')">About</a></li>
                     <li><a href="javascript:alert('준비중입니다.')">Support</a></li>
                     <li><a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a></li>
                 </ul>
-                <div id="ham_menuToggle" class="mo">
-                    <input type="checkbox" id="check_box">
-                    <label for="check_box">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </label>
-                    <div id="side_menu">
-                        <ul>
-                            <li><a href="javascript:alert('준비중입니다.')">Home</a></li>
-                            <li><a href="javascript:alert('준비중입니다.')">About</a></li>
-                            <li><a href="javascript:alert('준비중입니다.')">Support</a></li>
-                            <li><a href="javascript:alert('준비중입니다.')" class="down_btn btn" download>Download</a></li>
-                        </ul>
-                    </div>
-                </div>
+                <button type="button" class="mo menu_close_btn">
+                    <strong class="ir">메뉴 닫기 버튼</strong>
+                </button>
             </nav>
+            <button type="button" class="mo menu_open_btn">
+                <strong class="ir">메뉴 열기 버튼</strong>
+            </button>
         </div>
     </header>
     <main>
         <section class="sec sec01">
-            <h2 class="dis-no">
-                Lorem Ipsum is simply dummy text of the printing and
-            </h2>
+            <h2 class="sr_only">호두소개</h2>
             <div class="flex_box">
                 <div class="cont flex_box">
                     <p class="main_tit">
@@ -59,11 +47,9 @@
             </div>
         </section>
         <article class="sec sec02 flex_box">
-            <h2 class="dis-no">
-                Lorem Ipsum is simply dummy text of the printing and dummy text
-            </h2>
+            <h2 class="sr_only">소개글</h2>
             <div class="l_box shadow_box">
-                <img src="./img/sec02_img01.jpg" alt="누워있는 호두사진">
+                <img src="img/sec02_img01.jpg" alt="cat_img01">
             </div>
             <div class="r_box">
                 <p class="main_tit">
@@ -81,12 +67,12 @@
                 Lorem Ipsum has been the industry's<br class="mo"> standard dummy text ever since the 1500s,<br class="mo"> when an unknown
             </p>
             <div class="img_box grid_box">
-                <div class="shadow_box"><img src="./img/sec03_img01.jpg" alt="캣타워에 올라가있는 호두"></div>
-                <div class="shadow_box"><img src="./img/sec03_img02.jpg" alt="콘센트 앞 호두"></div>
-                <div class="shadow_box"><img src="./img/sec03_img03.jpg" alt="멀리서 쳐다보는 호두"></div>
-                <div class="shadow_box"><img src="./img/sec03_img04.jpg" alt="가까이서 보는 호두"></div>
-                <div class="shadow_box"><img src="./img/sec03_img05.jpg" alt="아래에서 올려다보는 호두"></div>
-                <div class="shadow_box"><img src="./img/sec03_img06.jpg" alt="하품하는 호두"></div>
+                <div class="shadow_box"><img src="img/sec03_img01.jpg" alt="cat_img02"></div>
+                <div class="shadow_box"><img src="img/sec03_img02.jpg" alt="cat_img03"></div>
+                <div class="shadow_box"><img src="img/sec03_img03.jpg" alt="cat_img04"></div>
+                <div class="shadow_box"><img src="img/sec03_img04.jpg" alt="cat_img05"></div>
+                <div class="shadow_box"><img src="img/sec03_img05.jpg" alt="cat_img06"></div>
+                <div class="shadow_box"><img src="img/sec03_img06.jpg" alt="cat_img07"></div>
             </div>
             <div class="btn_wr">
                 <p class="txt">Continue exploring HODU</p>
@@ -94,7 +80,7 @@
             </div>
         </section>
         <section class="sec sec04">
-            <h2 class="dis-no">Where you’ll be</h2>
+            <h2 class="sr_only">위치정보</h2>
             <div class="inner_box">
                 <p class="main_tit">Where you’ll be</p>
                 <p class="sub_txt">330, Cheomdan-ro, Jeju-si, Jeju-do,<br class="mo"> Republic of Korea</p>
@@ -120,9 +106,7 @@
             </div>
         </section>
         <article class="sec sec05">
-            <h2 class="dis-no">
-                Subscribe to our Blog post
-            </h2>
+            <h2 class="sr_only">블로그구독</h2>
             <div class="inner_box flex_box">
                 <div class="l_box">
                     <p class="main_tit">Subscribe to our<br class="mo"> Blog post</p>
@@ -133,7 +117,7 @@
                 </div>
                 <div class="r_box">
                     <form action="./index.html" method="POST" class="flex_box" id="myForm">
-                        <label for="useremail"><img src="./img/icon_mail.svg" alt="메일 아이콘"></label>
+                        <label for="useremail"><img src="img/icon_mail.svg" alt="mail"></label>
                         <input type="email" id="useremail" placeholder="Enter your e-mail address">
                         <button onclick="join_user()" class="btn pc">Subscribe</button>
                     </form>
@@ -143,7 +127,7 @@
             <div class="pop_wr">
                 <div class="pop_bg"></div>
                 <div class="pop_cont">
-                    <img src="./img/sec05_pop_img01.png" alt="호두 얼굴 사진">
+                    <img src="img/sec05_pop_img01.png" alt="cat_img08">
                     <p class="main_tit">Thank you!</p>
                     <p class="sub_txt">Lorem Ipsum is simply dummy<br class="mo"> text of the printing industry.</p>
                     <button class="exit_btn btn">OK! I Love HODU</button>
@@ -154,12 +138,12 @@
     <footer class="footer">
         <div class="flex_box">
             <div class="inner_box flex_box">
-                <a href="./index.html"><img src="./img/logo.svg" alt="HODU LOGO"></a>
+                <a href="./index.html"><img src="img/logo.svg" alt="hodu"></a>
                 <ul class="sns_box flex_box">
-                    <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-blog.png" alt="blog"></a></li>
-                    <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-insta.png" alt="instagram"></a></li>
-                    <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-facebook.png" alt="facebook"></a></li>
-                    <li><a href="javascript:alert('준비중입니다.')"><img src="./img/icon-youtube.png" alt="youtube"></a></li>
+                    <li><a href="javascript:alert('준비중입니다.')"><img src="img/icon-blog.png" alt="blog"></a></li>
+                    <li><a href="javascript:alert('준비중입니다.')"><img src="img/icon-insta.png" alt="instagram"></a></li>
+                    <li><a href="javascript:alert('준비중입니다.')"><img src="img/icon-facebook.png" alt="facebook"></a></li>
+                    <li><a href="javascript:alert('준비중입니다.')"><img src="img/icon-youtube.png" alt="youtube"></a></li>
                 </ul>
             </div>
             <ul class="mo menu_box flex_box">
@@ -173,6 +157,6 @@
     <!-- 상단 이동하기 버튼 -->
     <a href="#" class="btn_top pc"></a>
 
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

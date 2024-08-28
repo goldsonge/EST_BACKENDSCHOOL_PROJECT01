@@ -94,69 +94,6 @@
     font-family: Pretendard;
     font-size: 1.6rem;
 }
-/* hambuger menu*/
-/* 숨겨진 체크박스 */
-/*#check_box {*/
-/*    display: none;*/
-/*}*/
-
-/*!* 햄버거 메뉴 버튼 *!*/
-/*#check_box + label {*/
-/*    position: absolute;*/
-/*    display: block;*/
-/*    width: 24px;*/
-/*    height: 24px;*/
-/*    cursor: pointer;*/
-/*    z-index: 2;*/
-/*    right: 20px;*/
-/*    top: 30px;*/
-/*    transition: all 300ms;*/
-/*    background: url("../img/icon_ham_off.svg") center no-repeat;*/
-/*}*/
-
-/*#check_box:checked + label {*/
-/*    top: 28px;*/
-/*    right: calc(300px + -60px); !* 메뉴 폭(300px) + 여백(26px)만큼 왼쪽으로 이동 *!*/
-/*    background: url("../img/icon_ham_on.svg") center no-repeat;*/
-/*}*/
-
-/*!* 사이드 메뉴 *!*/
-/*#side_menu {*/
-/*    position: fixed;*/
-/*    width: 289px;*/
-/*    height: 100%;*/
-/*    background: #263140;*/
-/*    right: -289px;*/
-/*    transition: all 300ms;*/
-/*    z-index: 1;*/
-/*    top: 0px;*/
-/*    padding: 10.5rem 2rem 2rem 5rem;*/
-/*    box-sizing: border-box;*/
-/*}*/
-
-/*!* 사이드 메뉴가 열릴 때 *!*/
-/*#check_box:checked + label + #side_menu {*/
-/*    right: 0;*/
-/*}*/
-
-/*!* 사이드 메뉴 스타일 *!*/
-/*#side_menu ul {*/
-/*    list-style-type: none;*/
-/*    padding: 0;*/
-/*}*/
-
-/*#side_menu ul li {*/
-/*    padding: 1.5rem 0;*/
-/*}*/
-/*#side_menu ul li:last-child {*/
-/*    margin-top: 3.5rem;*/
-/*}*/
-/*#side_menu ul li a {*/
-/*    color: #fff;*/
-/*    font-size: 1.6rem;*/
-/*    line-height: 2rem;*/
-/*    font-weight: 700;*/
-/*}*/
 /* sec01 */
 .sec01 {
     padding: 20rem 0 26rem;

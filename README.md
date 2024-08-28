@@ -1,16 +1,15 @@
-# HODU LANDING PAGE
-## 👨‍🏫 프론트 프로젝트 목적
+# [EST] BACKENDSCHOOL_PROJECT01_FE
+## 👨‍🏫 프로젝트 목적
 - 피그마 시안과 요구사항 명세를 참고하여 랜딩페이지 제작
 - 시멘틱 태그로 구현하되 모바일 화면도 고려하여 과제 수행
 
-## ⚙️개발환경 및 기간
-
+## ⚙️개발환경 및 배포 URL
+### 개발환경
 - IDE : IntelliJ
 - 사용 언어 : HTML, CSS, Javascript
-- 기간 : 2024.08.19(월) ~ 2024.08.27(화)
-  - 0819 ~ 0821 PC 퍼블리싱 및 CSS, 스크립트 작업 완료
-  - 0822 ~ 0826 모바일 반응형 작업 및 w3c 웹표준 오류 수정
-  - 0827 1차 코드리뷰 확인 및 코드 수정
+
+### 배포 URL
+- 배포 URL : https://goldsonge.github.io/EST_BACKENDSCHOOL_PROJECT01/
 
 ## 📌요구사항 명세
 - 피그마를 참고하여 페이지 구현
@@ -28,7 +27,7 @@
   - 이때 모달창의 OK! I LOVE HODU 버튼을 클릭하면 form이 제출되고 모달창이 닫힘
 
 
-## 💻 프로젝트 구조와 구현 화면
+## 💻 프로젝트 구조와 기간
 ### 프로젝트 구조
 📦EST_BACKENDSCHOOL_PROJECT01  
 ┣ 📂css  
@@ -61,16 +60,63 @@
 ┣ 📜README.md  
 ┗ 📜index.html
 
-### 구현 화면
-#### PC
-![image](https://github.com/user-attachments/assets/cca3d27f-929b-40b0-bcf3-dc930d3c83f2)
-![image](pc.gif)
-#### MO
-![image](https://github.com/user-attachments/assets/59d91137-2f88-4133-9de9-ee0886ac5f71)
-![image](mo.gif)
+### 개발 일정 (WBS)
+```mermaid
+gantt
+    title [EST] BACKENDSCHOOL_PROJECT01_FE
+    dateFormat  YYYY-MM-DD
+    section FE
+    PC 퍼블리싱 및 CSS 작업 : 2024-08-19, 2d
+    PC CSS 완료 및 스크립트 작업 완료 : 2024-08-20 , 2d
+    MO 반응형  : 2024-08-22 , 4d
+    w3c 웹표준 오류 수정 : 2024-08-26 , 1d
+    1차 코드리뷰 확인 및 수정 : 2024-08-27 , 1d
+```
 
+## 💻 화면 설계
+<table>
+    <tbody>
+        <tr>
+            <td>PC main</td>
+            <td>MO main</td>
+        </tr>
+        <tr>
+            <td>
+		<img src="./gif/PC_main.gif" width="100%">
+            </td>
+            <td>
+                <img src="./gif/MO_main.gif" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>PC topBtn</td>
+            <td>MO hamburgerMenu</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./gif/PC_topBtn.gif" width="100%">
+            </td>
+            <td>
+                <img src="./gif/MO_ham.gif" width="100%">
+            </td>
+        </tr>
+        <tr>
+            <td>PC subscribe</td>
+            <td>MO subscribe</td>
+        </tr>
+        <tr>
+            <td>
+                <img src="./gif/PC_sub.gif" width="100%">
+            </td>
+            <td>
+                <img src="./gif/MO_sub.gif" width="100%">
+            </td>
+        </tr>
+    </tbody>
+</table>
 
 
 
 ## ⏲️ 개발하며 느낀점
-- 시멘트 태그를 늘 신경은 썼지만 잘 지켜지지 않았었는데 이번 프로젝트를 진행함으로써 시멘트 태그에 대한 이해도가 이전보다 더 좋아진 것 같다.
+- 시멘트 태그를 신경 써서 이번 프로젝트의 마크업 구조를 작성함으로써 시멘트 태그에 대해 조금 더 알아보는 시간이 되어 좋았다.
+- Javascript를 작성할 때 최대한 누가 봐도 알 수 있는 유지보수와 재사용률이 높은 코드로 작성하려고 노력하였는데 아직은 미숙하지만, 앞으로의 개발에서도 한 번 더 생각해 볼 수 있는 시간이 되었다.

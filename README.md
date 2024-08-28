@@ -24,43 +24,52 @@
 - 구독하기 모달창
   - 이메일을 입력하고 subscribe 버튼을 클릭하면 모달창 노출
   - 이메일 유효성 검사를 진행 (값이 들어가지 않거나 이메일 형식이 유효하지 않으면 alert 창으로 경고 문구 노출)
-  - 이메일이 잘 입력되었다면 모달창 노출. 
+  - 이메일이 잘 입력되었다면 모달창 노출.
   - 이때 모달창의 OK! I LOVE HODU 버튼을 클릭하면 form이 제출되고 모달창이 닫힘
-  
 
-## 💻 프로젝트 구조와 개발 일정
+
+## 💻 프로젝트 구조와 구현 화면
 ### 프로젝트 구조
-- 해당 프로젝트에서 폴더 트리 잘 다듬어 사용하세요. 필요하다면 주석을 달아주세요.
-  📦EST_BACKENDSCHOOL_PROJECT01  
-  ┣ 📂css  
-  ┃ ┣ 📜main.css  
-  ┃ ┗ 📜reset.css  
-  ┣ 📂img  
-  ┃ ┣ 📜Logo.svg   
-  ┃ ┣ 📜icon-blog.png  
-  ┃ ┣ 📜icon-facebook.png  
-  ┃ ┣ 📜icon-insta.png   
-  ┃ ┣ 📜icon-youtube.png     
-  ┃ ┣ 📜icon_arr_off.svg   
-  ┃ ┣ 📜icon_arr_on.svg  
-  ┃ ┣ 📜icon_ham_off.svg   
-  ┃ ┣ 📜icon_ham_on.svg  
-  ┃ ┣ 📜icon_mail.svg  
-  ┃ ┣ 📜sec01_bg01.png   
-  ┃ ┣ 📜sec02_img01.jpg    
-  ┃ ┣ 📜sec03_img02.jpg  
-  ┃ ┣ 📜sec03_img03.jpg  
-  ┃ ┣ 📜sec03_img04.jpg  
-  ┃ ┣ 📜sec03_img05.jpg  
-  ┃ ┣ 📜sec03_img06.jpg  
-  ┃ ┣ 📜sec04_img01.jpg  
-  ┃ ┣ 📜sec05_bg01.jpg   
-  ┃ ┣ 📜sec05_pop_bg.jpg   
-  ┃ ┗ 📜sec05_pop_img01.png  
-  ┣ 📂js   
-  ┃ ┗ 📜main.js  
-  ┣ 📜README.md  
-  ┗ 📜index.html
+📦EST_BACKENDSCHOOL_PROJECT01  
+┣ 📂css  
+┃ ┣ 📜main.css  
+┃ ┗ 📜reset.css  
+┣ 📂img  
+┃ ┣ 📜Logo.svg   
+┃ ┣ 📜icon-blog.png  
+┃ ┣ 📜icon-facebook.png  
+┃ ┣ 📜icon-insta.png   
+┃ ┣ 📜icon-youtube.png     
+┃ ┣ 📜icon_arr_off.svg   
+┃ ┣ 📜icon_arr_on.svg  
+┃ ┣ 📜icon_ham_off.svg   
+┃ ┣ 📜icon_ham_on.svg  
+┃ ┣ 📜icon_mail.svg  
+┃ ┣ 📜sec01_bg01.png   
+┃ ┣ 📜sec02_img01.jpg    
+┃ ┣ 📜sec03_img02.jpg  
+┃ ┣ 📜sec03_img03.jpg  
+┃ ┣ 📜sec03_img04.jpg  
+┃ ┣ 📜sec03_img05.jpg  
+┃ ┣ 📜sec03_img06.jpg  
+┃ ┣ 📜sec04_img01.jpg  
+┃ ┣ 📜sec05_bg01.jpg   
+┃ ┣ 📜sec05_pop_bg.jpg   
+┃ ┗ 📜sec05_pop_img01.png  
+┣ 📂js   
+┃ ┗ 📜main.js  
+┣ 📜README.md  
+┗ 📜index.html
+
+### 구현 화면
+#### PC
+![image](https://github.com/user-attachments/assets/cca3d27f-929b-40b0-bcf3-dc930d3c83f2)
+![image](pc.gif)
+#### MO
+![image](https://github.com/user-attachments/assets/59d91137-2f88-4133-9de9-ee0886ac5f71)
+![image](mo.gif)
+
+
 
 
 ## ⏲️ 개발하며 느낀점

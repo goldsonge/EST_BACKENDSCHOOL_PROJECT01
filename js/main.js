@@ -65,6 +65,7 @@ function join_user(){
         function closePopup(event) {
             event.preventDefault();
             togglePopup();
+            useremail.value = '';
         }
 
         // 처음에 팝업을 열 때
